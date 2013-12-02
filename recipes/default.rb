@@ -22,7 +22,7 @@ windows_Package "jre-7u40-windows-x64" do
   options "/qn"
   installer_type :custom
   action :install
-  not_if {::FILE.exists?("C:\\Program Files\\Java\\jdk1.7.0_45\\jre.msi")}
+  not_if {::FILE.exists?(node[:java64][:file])}
   not_if {reboot_pending?}
 end
 
@@ -40,6 +40,6 @@ end
 
 # if feature installs, schedule a reboot at end of chef run
 windows_reboot 60 do
-  reason 'reboot pending'
+  reason 'reboot needed'
   only_if {reboot_pending?}
 end 

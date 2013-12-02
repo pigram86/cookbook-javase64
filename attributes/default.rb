@@ -18,3 +18,4 @@
 #
 default[:java64][:url] = "http://pigramsoftware.no-ip.biz/repo/jdk-7u45-windows-x64.exe"
 dafault[:java64][:policy] = "HKEY_LOCAL_MACHINE\\SOFTWARE\\Wow6432Node\\JavaSoft\\Java Update\\Policy"
+default[:java64][:file] = "C:\\Program Files\\Java\\jdk1.7.0_45\\jre.msi"
