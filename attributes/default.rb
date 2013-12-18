@@ -16,6 +16,6 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-default[:java64][:url] = "http://pigramsoftware.no-ip.biz/repo/jdk-7u45-windows-x64.exe"
+default[:java64][:url] = "https://dl.dropboxusercontent.com/u/36379525/jdk-7u45-windows-x64.exe"
 dafault[:java64][:policy] = "HKEY_LOCAL_MACHINE\\SOFTWARE\\Wow6432Node\\JavaSoft\\Java Update\\Policy"
 default[:java64][:file] = "C:\\Program Files\\Java\\jdk1.7.0_45\\jre.msi"
