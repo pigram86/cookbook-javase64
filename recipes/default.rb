@@ -18,7 +18,7 @@
 #
 
 # Instal javase
-windows_Package "java64" do
+windows_package "java64" do
   source node['java64']['url']
   options "/qn"
   installer_type :custom
