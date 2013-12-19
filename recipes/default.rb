@@ -16,18 +16,19 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
+
 # Instal javase
-windows_Package "jre-7u40-windows-x64" do
-  source node[:java64][:url]
+windows_Package "java64" do
+  source node['java64']['url']
   options "/qn"
   installer_type :custom
   action :install
-  not_if {::FILE.exists?(node[:java64][:file])}
+  not_if {::FILE.exists?(node['java64']['file'])}
   not_if {reboot_pending?}
 end
 
 # disable java update
-registry_key node[:java64][:policy] do
+registry_key node['java64']['policy'] do
   values [{
     :name => "EnableJavaUpdate",
     :type => :dword,
