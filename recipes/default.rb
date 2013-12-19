@@ -20,7 +20,7 @@
 # Instal javase
 windows_package "jre-7u45-windows-x64" do
   source node['java64']['url']
-  options "/qn"
+  options "/s"
   installer_type :custom
   action :install
   not_if {::File.exists?(node['java64']['file'])}
